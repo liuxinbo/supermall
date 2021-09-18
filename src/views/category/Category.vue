@@ -122,10 +122,12 @@ export default {
 
   //组件创建完后调用
   created() {
+    console.log('cccccc111');
     // this.scroll = new BScroll(this.$refs.aaaa,{
     // })
   },
   mounted() {
+    console.log('cccccc222');
     // console.log(this.$refs.aaaa);
     // console.log(document.querySelector(".wrapper"));
     this.scroll = new BScroll(document.querySelector(".wrapper"), {
@@ -138,6 +140,12 @@ export default {
     this.scroll.on('pullingUp',() => {
       console.log("上拉加载更多");
     })
+  },
+  activated(){
+    console.log("ccccccc333333");
+  },
+  deactivated(){
+    console.log("cccccc4444444");
   },
   methods:{
     btnClick(){

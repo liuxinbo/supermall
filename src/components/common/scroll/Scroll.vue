@@ -64,7 +64,7 @@ export default {
     },
 
     finishPullUp() {
-      this.scroll.finishPullUp();
+      this.scroll && this.scroll.finishPullUp();
     },
     refresh() {
       //console.log('-------');

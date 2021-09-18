@@ -37,7 +37,7 @@ export default {
   },
   methods:{
     itemCLick(){
-      console.log("itemCLick");
+      //console.log("itemCLick");
       this.$router.replace(this.path)
     }
   } 

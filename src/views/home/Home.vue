@@ -80,6 +80,7 @@ export default {
       return this.goods[this.currentType].list;
     },
   },
+
   created() {
     //1.请求多个数据
     this.getHomeMultidata();
@@ -127,7 +128,7 @@ export default {
       this.isShowBackTop = -position.y > 1000;
 
       //判断tabControl是否吸顶(position:fixed)
-      this.isTabFixed = -position.y > this.tabOffsetTop;
+      this.isTabFixed = -position.y > this.tabOffsetTop ? true : false;;
     },
 
     //上拉加载更多
@@ -176,8 +177,8 @@ export default {
         this.goods[type].page += 1;
 
         //完成了上拉加载更多
-        this.$refs.scroll.finishPullUp();
-      });
+        this.$refs.scroll.finishPullUp()
+      }).catch(() => console.log('promise catch err')); //捕获异常;
     },
   },
 };

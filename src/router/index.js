@@ -4,6 +4,7 @@ const Home = () => import('../views/home/Home');
 const Category = () => import('../views/category/Category');
 const Cart = () => import('../views/cart/Cart');
 const Profile = () => import('../views/profile/Profile');
+const Detail = () => import('../views/detail/Detail');
 
 // Vue.use(vueRouter);
 //createApp(App).use(router)
@@ -11,23 +12,42 @@ const Profile = () => import('../views/profile/Profile');
 const routes = [ 
   {
     path: '',
-    redirect: '/home'
+    redirect: '/home',
   },
   {
     path: '/home',
-    component: Home
+    component: Home,
+    meta: {
+      keepAlive: true //设置页面是否需要使用缓存
+    }
   },
   {
     path: '/category',
-    component: Category
+    component: Category,
+    meta: {
+      keepAlive: true
+    }
   },
   {
     path: '/cart',
-    component: Cart
+    component: Cart,
+    meta: {
+      keepAlive: true
+    }
   },
   {
     path: '/profile',
-    component: Profile
+    component: Profile,
+    meta: {
+      keepAlive: true
+    }
+  },
+  {
+    path: '/detail',
+    component: Detail,
+    meta: {
+      keepAlive: true
+    }
   }
 ]
 
