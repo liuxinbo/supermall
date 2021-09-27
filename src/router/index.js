@@ -7,7 +7,6 @@ const Profile = () => import('../views/profile/Profile');
 const Detail = () => import('../views/detail/Detail');
 
 // Vue.use(vueRouter);
-//createApp(App).use(router)
 
 const routes = [ 
   {
@@ -43,7 +42,7 @@ const routes = [
     }
   },
   {
-    path: '/detail',
+    path: '/detail/:iid',
     component: Detail,
     meta: {
       keepAlive: true

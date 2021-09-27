@@ -135,8 +135,8 @@ export default {
       }
       // 4.让swiper元素, 显示第一个(目前是显示前面添加的最后一个元素)
       this.setTransform(-this.totalWidth);
-       console.log(swiperEl);
-       console.log(slidesEls.length);
+      //  console.log(swiperEl);
+      //  console.log(slidesEls.length);
        //console.log("this.slideCount" + this.slideCount)
     },
     /**
